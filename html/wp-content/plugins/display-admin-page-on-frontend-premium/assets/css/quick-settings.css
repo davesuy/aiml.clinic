@@ -1,0 +1,148 @@
+
+.vg-frontend-admin-quick-settings a.logo-wrapper {
+	position: absolute;
+	top: 34px;
+	width: 100%;
+	left: 0;
+	background: white;
+}
+
+.vg-frontend-admin-quick-settings a:not(.button),
+.vg-frontend-admin-quick-settings a:not(.button):hover,
+.vg-frontend-admin-quick-settings a:not(.button):visited {
+	color: #21759b;	
+}
+.vg-frontend-admin-quick-settings {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 240px;
+	height: 100%;
+	background: #eee;
+	padding: 50px 10px 10px;
+	overflow: auto;
+	line-height: 17px;
+	font-size: 13px;
+	font-family: Arial; 
+	font-weight: normal;
+	z-index: 999;
+	padding-top: 90px;
+    box-sizing: border-box;
+}
+.vg-frontend-admin-quick-settings label {
+	margin-top: 5px;
+	font-weight: normal;
+}
+.vg-frontend-admin-quick-settings .field {
+	margin: 0 0 10px;
+}
+.vg-frontend-admin-quick-settings input,.vg-frontend-admin-quick-settings select {
+	display: block;
+	margin: 5px 0 0;
+	padding: 5px !important;
+	width: 100%;
+	background: white;
+	height: 30px;
+	line-height: 16px;
+	color: black;
+	font-size: 13px !important;
+}
+.vg-frontend-admin-quick-settings button,
+.vg-frontend-admin-quick-settings a.button{
+	padding: 5px;
+	background-color: #3578cc;
+	color: white !important;
+	border-radius: 0;
+	text-decoration: none;
+	margin: 5px 0;
+	display: inline-block;
+}
+.vg-frontend-admin-quick-settings button:focus,
+.vg-frontend-admin-quick-settings button:hover,
+.vg-frontend-admin-quick-settings .button:focus,
+.vg-frontend-admin-quick-settings .hide-elements-trigger.wpfa-hide-elements-active,
+.vg-frontend-admin-quick-settings .button:hover {
+	background-color: black;
+	color: white;
+	background-image: none;
+	box-shadow: none;
+}
+.vg-frontend-admin-quick-settings hr {
+	margin: 10px !important;
+	padding: 0 !important;
+	max-width: 100% !important;
+	height: 1px !important;
+	border-top: 1px solid #a2a2a2;
+}
+body.vg-frontend-admin-visible-quick-settings {
+	width: calc(100% - 240px) !important;
+	margin-left: 240px !important;
+}
+.vg-frontend-admin-quick-settings-toggle,
+.vg-frontend-admin-quick-settings-toggle:focus,
+.vg-frontend-admin-quick-settings-toggle:hover {
+	position: fixed;
+	left: 240px;
+	padding: 5px 10px;
+	font-size: 17px;
+	background: #eeeeee;
+	color: black;
+	border: 0;
+	border-radius: 0;
+	bottom: 0px;
+}
+.vg-frontend-admin-quick-settings ul {
+	margin: 0;
+}
+.vg-frontend-admin-quick-settings input[type="checkbox"] {
+	height: 15px;
+	float: left;
+	width: 15px;
+	margin-right: 10px;
+}
+.vgfa-has-quick-settings .vgca-iframe-wrapper iframe.vgfa-full-screen {
+	width: calc(100vw - 240px) !important;
+	margin-left: 240px;
+	min-width: auto;
+}
+.vg-frontend-admin-quick-settings .column-template {
+	clear: both;
+}
+.vg-frontend-admin-quick-settings .vgfa-create-menu-input,
+.vg-frontend-admin-quick-settings .columns-manager > .column-template,
+.vg-frontend-admin-quick-settings .stop-edit-text-trigger {
+	display: none;
+}
+.vg-frontend-admin-quick-settings .inline-button {
+    border: 1px solid #444;
+    padding: 4px 8px;
+    border-right: 0;
+    float: left;
+}
+.vg-frontend-admin-quick-settings .inline-button:last-child {
+    border-right: 1px solid #444;
+}
+.vg-frontend-admin-quick-settings .common-errors {
+    padding: 10px 0;
+    line-height: 20px;
+}
+.vg-frontend-admin-quick-settings .common-errors ol > li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #bbb;
+}
+.vg-frontend-admin-quick-settings .common-errors ol > li:last-child {
+    border: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.vg-frontend-admin-quick-settings .field.inline-buttons {
+    overflow: auto;
+}
+.vg-frontend-admin-quick-settings .common-errors ul {
+    margin: 10px 0;
+}
+.vg-frontend-admin-quick-settings .wpfa-wu-plan-row {
+    clear: both;
+}

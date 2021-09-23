@@ -1,0 +1,31 @@
+#astra_settings_meta_box > div.postbox-header:nth-child(1) > h2.hndle.ui-sortable-handle:nth-child(1),  
+#pageparentdiv,  
+#edit-slug-box, 
+#elementor-switch-mode,  
+#misc-publishing-actions > div.misc-pub-section.curtime.misc-pub-curtime:nth-child(4),  
+#minor-publishing-actions,  
+#misc-publishing-actions > div.misc-pub-section.misc-pub-post-status:nth-child(1),  
+#revisionsdiv,  
+#authordiv,  
+#astra_settings_meta_box,  
+#wp-content-editor-tools,  
+#misc-publishing-actions > div.misc-pub-section.misc-pub-revisions:nth-child(3),  
+#visibility,  
+#delete-action > a.submitdelete.deletion:nth-child(1),  
+#wpbody-content > div.wrap:nth-child(3) > a.page-title-action:nth-child(2),  
+#wpbody-content > div.wrap:nth-child(3) > h1.wp-heading-inline:nth-child(1),
+#post-body-content,
+#normal-sortables #jet-engine-cpt-2,
+#normal-sortables #jet-engine-cpt-3,
+#normal-sortables #jet-engine-cpt-7,
+#side-sortables #jet-engine-cpt-6,
+#normal-sortables #postexcerpt,
+#minor-publishing,
+#wpbody-content #postbox-container-1 {
+    display: none !important;
+}
+
+#wpbody-content > div.wrap:nth-child(3) > h1.wp-heading-inline:nth-child(1) {
+    display: none !important;
+}
+

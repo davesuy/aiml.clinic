@@ -1,0 +1,66 @@
+language: php
+
+sudo: false
+dist: trusty
+
+php:
+- 5.4
+- 5.5
+- 5.6
+- 7.0
+- 7.1
+- 7.2
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=39e533a835ddd9ee7c02814796df4bc53c6cc8fd9276731cec5cf3fbc2d548c7
+  matrix:
+    - WP_VERSION=latest WP_MULTISITE=0
+    - WP_VERSION=4.9.6 WP_MULTISITE=0
+    - WP_VERSION=4.8.3 WP_MULTISITE=0
+    - WP_VERSION=4.7.7 WP_MULTISITE=0
+
+matrix:
+  include:
+  - php: 7.1
+    env: WP_VERSION=latest WP_MULTISITE=0
+  - php: 7.1
+    env: WP_VERSION=4.7 WP_MULTISITE=0
+  - php: 5.6
+    env: WP_VERSION=latest WP_MULTISITE=1
+  - php: 5.3
+    env: WP_VERSION=latest WP_MULTISITE=0
+    dist: precise
+  - php: 5.3
+    env: WP_VERSION=4.7 WP_MULTISITE=0
+    dist: precise
+
+before_install:
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- ./cc-test-reporter before-build
+
+before_script:
+- wget https://gravitywiz.com/wp-content/uploads/edd/2018/08/gravityperks-2.0.11.zip -O gravityperks.zip
+- wget http://gravitywiz.com/wp-content/uploads/2018/10/gravityforms_2.3.4.1.zip -O gravityforms.zip
+- unzip gravityperks.zip -d ../
+- unzip gravityforms.zip -d ../
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+- export PATH="$HOME/.composer/vendor/bin:$PATH"
+- |
+  if [[ ${TRAVIS_PHP_VERSION:0:2} == "7." ]]; then
+    composer global require "phpunit/phpunit=5.7.*"
+  else
+    composer global require "phpunit/phpunit=4.8.*"
+  fi
+
+script:
+- phpunit --coverage-clover=clover.xml
+
+after_script:
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+branches:
+  only:
+  - master
+  - /^release\/.*$/

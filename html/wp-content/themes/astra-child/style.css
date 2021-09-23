@@ -1,0 +1,106 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+.eael-advance-tabs .eael-tabs-content .user-details-wrap {
+    padding: 0 0px 0px 20px;
+}
+
+.gform_confirmation_wrapper.registration-expert-form .gform_confirmation_message {
+    color: #fff !important;
+
+}
+body .vgca-loading-indicator.lds-ring {
+    top: 50px;
+}
+
+.ui-tabs-vertical { width: 55em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+
+
+/* Calendly */
+
+body .jet-apb-calendar .jet-apb-calendar-date.jet-apb-calendar-date--selected .jet-apb-calendar-date-body {
+    background: #2D69F6;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    padding: 12px !important;
+    color: #fff !important;
+}
+
+body .jet-apb-calendar .jet-apb-calendar-date .jet-apb-calendar-date-body {
+    background: #EFF5FE;
+    border-radius: 50% !important;
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    padding: 12px !important;
+    margin: 10px;
+    color: #73A1F9 !important;
+}
+
+body .jet-apb-calendar .jet-apb-calendar-date.jet-apb-calendar-date--disabled .jet-apb-calendar-date-body {
+    background: transparent;
+    color: #797979;
+}
+
+body .jet-apb-calendar .jet-apb-calendar-date.jet-apb-calendar-date--today .jet-apb-calendar-date-body {
+    position: relative;
+}
+
+body .jet-apb-calendar .jet-apb-calendar-date.jet-apb-calendar-date--today .jet-apb-calendar-date-body:after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    background: #2D69F6;
+    position: absolute;
+    border-radius: 50%;
+    top: 45px;
+    left: 27px;
+}
+
+body .jet-form .jet-apb-calendar .jet-apb-calendar-slots .jet-apb-slot {
+    color: #4777F6 !important;
+    border: 1px solid #4777F6;
+    border-radius: 4px;
+    padding: 10px 10px;
+    max-width: 311px;
+    width: 100%;
+    text-align: center;
+}
+
+body .jet-form .jet-apb-calendar .jet-apb-calendar-slots .jet-apb-slot.jet-apb-slot--selected {
+    color: #FF0000 !important;
+    border: 1px solid #FF0000;
+}
+
+body .jet-form .jet-apb-calendar .jet-apb-calendar-slots {
+    display: block !important;
+    right: 200px;
+    top: 190px;
+    position: absolute;
+}
+
+body .jet-form .jet-apb-calendar.appointment-calendar {
+    position: inherit;
+}
+
+.type-experts .field-type-appointment_date.jet-form-field-container {
+    background: #fff;
+    min-height: 700px;
+}

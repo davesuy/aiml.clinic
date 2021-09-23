@@ -1,0 +1,3 @@
+interface GravityFormsField {
+	inputs: any
+}

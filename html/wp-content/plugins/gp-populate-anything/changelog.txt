@@ -1,0 +1,344 @@
+# Changelog
+
+## 1.0-beta-2.51
+
+	- Fixed issue where GPPA was overriding inapplicable WP_Query queries.
+
+## 1.0-beta-2.50
+
+	- Fixed conflict with GF Copy Cat and fields that have dynamically populated choices.
+
+## 1.0-beta-2.49
+
+	- Fixed issue where editing GPPA-populated Checkbox fields in Gravity View resulted in validation error and failed to save new values.
+
+## 1.0-beta-2.48
+
+	- Fixed issue where inputs were not populated for Checkbox fields.
+
+## 1.0-beta-2.47
+
+	- Fixed issue where filtering by taxonomy term was not working.
+	- Fixed issue where user role was not populated correctly. (#8)
+	- Fixed an issue where Chained Select fields could be selected as a Form Field Values.
+	- Fixed potential error in form editor regarding form field values.
+
+## 1.0-beta-2.45
+
+	- Fixed issue where PA settings showed based on field type but did not account for input type.
+	- Added support for post_name property when filtering and populating posts.
+
+## 1.0-beta-2.44
+
+	- The wizards busted out their new spellbook and converted Populate Anything's JavaScript to TypeScript! This will allow them to deliver new delightful features and bug fixes more quickly.
+
+## 1.0-beta-2.43
+
+	- Fixed issue where calculation-enabled fields did not return correct value for live merge tag.
+
+## 1.0-beta-2.42
+
+	- Fixed regression introduced in 1.0-beta-2.40 where getFormId() no longer returned a form ID for non-WooCommerce-loaded forms.
+
+## 1.0-beta-2.41
+
+	- Fixed issue where Enhanced-UI-enabled fields were not reinitialized after being replaced.
+
+## 1.0-beta-2.40
+
+	- Fixed issue where id was not set on on <form> when rendering form via WC GF Product Add-ons plugin.
+
+## 1.0-beta-2.39
+
+	- Fixed issue with populating values dynamically.
+
+## 1.0-beta-2.38
+
+	- Fixed regression with dynamic value population.
+
+## 1.0-beta-2.37
+
+	- Added Object ID property to Taxonomy Object Type
+
+## 1.0-beta-2.36
+
+	- Fixed issue where field-filtered fields were not correctly populated when editing an entry.
+
+## 1.0-beta-2.35
+
+	- Updated GP_Populate_Anything::modify_field_values() to pass posted values when checking for input value.
+	- Fixed fatal error on PHP 7.2+ where incorrect parameter count was specified.
+
+## 1.0-beta-2.34
+
+	- Deprecated gppa_live_merge_tag_loading_text filter.
+	- Added gppa_strings filter.
+
+## 1.0-beta-2.32
+
+	- Fixed issue where Date field with dropdowns would not have its values properly populated.
+
+## 1.0-beta-2.31
+
+	- Fixed issue when populating choices based on field on previous page.
+	- Updated to use array_replace.
+	- Fixed issue when populating choices based on field on previous page.
+	- Added support for correctly populating when default dynamic population is used.
+
+## 1.0-beta-2.30
+
+	- Fixed inconsistent behavior on page load and input change with Live Merge Tags.
+	- Updated Live Merge Tags to use values from the field’s get_value_save_entry() method.
+
+## 1.0-beta-2.29
+
+	- Fixed >=, <=, <, and > filter operators with GF Entry Object Type
+
+## 1.0-beta-2.28
+
+	- Fixed issue where certain properties such as Post Date were not filtering with the correct value.
+
+## 1.0-beta-2.27
+
+	- Fixed issue where Hidden fields would not have their value properly populated.
+
+## 1.0-beta-2.26
+
+	- Fixed issue where dynamically populated fields would lose their value on multi-page forms.
+
+## 1.0-beta-2.25
+
+	- Added polyfill for Object.assign which is not natively supported by IE.
+
+## 1.0-beta-2.24
+
+	- Fixed parse error with older versions of PHP.
+
+## 1.0-beta-2.23
+
+	- Added support for form-specific script localization.
+
+## 1.0-beta-2.22
+
+	- Added support for populating Checkbox values.
+	- Fixed issue where Populate Anything’s frontend scripts would be localized multiple times.
+
+## 1.0-beta-2.21
+
+	- Added compatibility layer for fields such as the Time field that store a single value in the database but have multiple inputs. This addition includes a new filter named ‘gppa_interpreted_multi_input_field_types’.
+	- Fixed issue where fields that had multiple .ginput_container elements would not be loaded correctly if dependent on another field. This should resolve an issue where Time fields would show multiple times.
+
+## 1.0-beta-2.20
+
+	- Fixed issue where Post object type taxonomy filters would only search by ID instead of ID and slug.
+
+## 1.0-beta-2.19
+
+	- Fixed notice when attempting to replace live merge tags in non-string values.
+
+## 1.0-beta-2.18
+
+	- Fixed issue where results wouldn’t always be unique even with “Only Show Unique Results” checked.
+	- Fixed inconsistent behavior with numerous chained selects.
+
+## 1.0-beta-2.17
+
+	- Fixed issue where GF Populate Anything fields dependent on other fields would needlessly reload when using GF Nested Forms and cause issues with GF Nested Form’s {parent} merge tag.
+
+## 1.0-beta-2.16
+
+	- Fixed regression with field values introduced in 1.0-beta-2.14.
+
+## 1.0-beta-2.15
+
+	- Fixed issue where field dependency check wasn’t taking “OR” into account.
+
+## 1.0-beta-2.14
+
+	- Fixed issue where fields using a parameter value would not be populated correctly.
+	- Removed unused variable.
+	- Fixed potential performance issue with GP Populate Anything’s Live Merge tags.
+
+## 1.0-beta-2.13
+
+	- Fixed issue where plugin title did not show up correctly on Logging screen.
+
+## 1.0-beta-2.12
+
+	- Added ‘gppa_object_merge_tag_replacement_value’ filter.
+	- Added new {count} merge tag that can be used in Value and Choice templates. Tip: try this out with conditional logic and calculations!
+	- Fixed issue where dynamically populated fields with a default value that depended on another field would not use their default value.
+	- Fixed styling issue of custom template inputs in form editor.
+	- Added Post Date as an available property for the Post object type
+
+## 1.0-beta-2.11
+
+	- Added a new “Special Values” group to the Filter Value select containing “Current User ID” and “Current Post ID”
+
+## 1.0-beta-2.10
+
+	- Fixed issue where dynamic values would be populated with the first result even if dependent fields didn’t have a value.
+	- Fixed potential PHP notice.
+
+## 1.0-beta-2.9
+
+	- Fixed issue with dependent field detection when using another field value in a custom choice/value template.
+	- Fixed issue with GF Entry object type “starts with” and “ends with” operators
+	- Updated operators to force a custom input only when using the “is LIKE” operator instead of “is LIKE”, “starts with”, “ends with”, and “contains”
+	- Fixed issue where choice placeholders such as no results and fill out other fields were not properly selected.
+
+## 1.0-beta-2.8
+
+	- Added checkbox to toggle unique results.
+	- Fixed issue with unique label/detection when using custom choice/value templates.
+
+## 1.0-beta-2.7
+
+	- Fixed issue where dynamically populated values would not work with Gravity Forms Conditional Logic
+
+## 1.0-beta-2.6
+
+	- Fixed notice when provided form ID does not exist.
+
+## 1.0-beta-2.5
+
+	- Fixed issue where Checkbox field values were not saved correctly on submission.
+
+## 1.0-beta-2.4
+
+	- Fixed issue where Calculation-enabled fields which included a GPPA-populated field in its formula were not recalculated when GPPA re-populated the field.
+
+## 1.0-beta-2.3
+
+	- Fixed issue where GPPA prevented input toggles on fields such as the Address field from working.
+
+## 1.0-beta-2.2
+
+	- Fixed an issue where GP Populate Anything fields wouldn’t properly populate when used with GP Nested Forms.
+	- Fixed a potential PHP notice in the Gravity Forms form editor.
+	- Fixed conflicts with forms using both pages and AJAX.
+	- Fixed issue where the field value would be blank when using a Field Value Object field that’s pointed to a field using the Database object type.
+	- Updated Number field to hide GPPA settings if Enable Calculation is checked.
+
+## 1.0-beta-2.1
+
+	- Fixed issue where choice based Product fields wouldn’t properly use the price template.
+
+## 1.0-beta-2.0
+
+	- Updated Post, User, Term and GF Entry to return unique choices and values.
+	- Updated Database object type to return unique choices and values based off of the choice label and value templates.
+	- Removed unused method.
+
+## 1.0-beta-1.21
+
+	- Fixed issue when using Field Value Objects with fields that depend on other fields.
+
+## 1.0-beta-1.20
+
+	- Updated Vue to v2.5.21
+	- Fixed issue where Primary Property select would reset to the first option when switching fields in the Form Editor.
+	- Updated GP Populate Anything enabled icon placement in the field editor.
+	- Fixed issue with Post taxonomies not working in templates.
+	- Fixed notice where $field was not an object.
+
+## 1.0-beta-1.19
+
+	- Updated to populate choices when form is submitted; better aligns with developer expectation when interacting with fields during submission.
+
+## 1.0-beta-1.18
+
+	- Improved GF Entry Object Type to exclude trashed entries by default.
+	- Fixed formatting issue with custom value input in GPPA field settings.
+
+## 1.0-beta-1.17
+
+	- Fixed issue where preview results would be queried prior to completing filter/template changes.
+
+## 1.0-beta-1.16
+
+	- Fixed issue where GPPA settings would reload when re-opening the same field’s settings.
+
+## 1.0-beta-1.15
+
+	- Fixed issue where List field would show as a supported field type when multiple columns are enabled.
+
+## 1.0-beta-1.14
+
+	- Fixed issue where property values wouldn’t reload when re-opening a field’s settings.
+
+## 1.0-beta-1.13
+
+	- Fixed various issues with chained choice fields and placeholders.
+	- Fixed issue where properties of GF Entry and Database object types would not load in the admin when switching between fields that both use the same object type and primary property.
+	- Fixed issue with certain operators such as contains and starts with.
+
+## 1.0-beta-1.12
+
+	- Updated GP_Populate_Anything::process_template(); requires a list of all matching objects which are passed to the gppa_process_template filter. This allows 3rd party support for populating multiple results into a single input.
+	- Fixed fatal error when Gravity Forms was not active.
+	- Fixed issue with merge tag parsing in custom templates
+
+## 1.0-beta-1.11
+
+	- Fixed potential error with gppaTruncateStringMiddle
+	- Updated "Loading..." markup with container to allow better styling control.
+	- Fix issue where GPPA_FILTER_FIELD_MAP and GPPA_FIELD_VALUE_OBJECT_MAP localization did not occur when rendering form via gravity_forms() function.
+	- Updated documentation URL.
+
+## 1.0-beta-1.10
+
+	- Fixed issue with Field Value Objects not working when the target field was using an Object Type that used a Primary Property such as GF Entry or Database
+
+## 1.0-beta-1.9
+
+	- Fixed apply_filter typo that should be apply_filters
+	- Fixed PHP 5.3 compatibility issue with Posts object type
+	- Improved field value and field value object AJAX functionality
+
+## 1.0-beta-1.8
+
+	- Added default template for User object type
+	- Fixed PHP warning on older versions of PHP
+	- Added the following filters to the Database object type: gppa_object_type_database_column_value_query, gppa_object_type_database_pre_query_parts, gppa_object_type_database_query
+	- Fixed strict comparison with Field Value Objects
+
+## 1.0-beta-1.7
+
+	- Fixed issue where primary property select would show when using a field value object
+
+## 1.0-beta-1.6
+
+	- Fixed a few issues with Field Value Objects
+	- Fixed issue with ‘0’ in field filter values not working properly
+	- Added Entry ID property to GF Entry object type
+
+## 1.0-beta-1.5
+
+	- Fixed query limit for GF Entry object type
+
+## 1.0-beta-1.4
+
+	- Added post content property to Post object type
+	- Added support for Paragraph Text fields
+
+## 1.0-beta-1.3
+
+	- Fixed issue with ordering method
+	- Added ordering support for GF Entry object type
+	- Removed extra console.log’s
+
+## 1.0-beta-1.2
+
+	- Fixed operators with User » Role property
+
+## 1.0-beta-1.1
+
+	- Fixed property value selects to filter out duplicates
+	- Fixed prefixes on certain properties such as post meta and GF Entry Fields
+	- Fixed potential PHP warning/notice
+	- Fixed memory leak with GPPA_Object_Type_GF_Entry#get_forms()
+
+## 1.0-beta-1
+
+	- Hello World!

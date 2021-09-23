@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		"outDir": "./js/built/",
+		"sourceMap": true,
+		"strict": true,
+		"noImplicitReturns": true,
+		"module": "es2015",
+		"moduleResolution": "node",
+		"target": "es5",
+		"lib": [
+			"es2016", "es2017.object", "dom"
+		],
+		"esModuleInterop": true
+	},
+	"include": [
+		"./js/src/**/*"
+	]
+}

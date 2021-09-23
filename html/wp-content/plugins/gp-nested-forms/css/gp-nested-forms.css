@@ -1,0 +1,195 @@
+
+.gpnf-nested-entries-container {
+	overflow: auto;
+}
+
+.gpnf-nested-entries {
+	border-top: 1px solid rgba( 0, 0, 0, 0.1 );
+	min-width: 50%;
+	border-spacing: 0;
+	border-collapse: separate;
+}
+
+.gpnf-nested-entries th,
+.gpnf-nested-entries td {
+	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	padding: 4px 8px;
+}
+
+.gpnf-nested-entries th {
+	background-color: rgba( 0, 0, 0, 0.1 );
+	border-color: rgba( 0, 0, 0, 0.1 );
+}
+
+.gpnf-no-entries td {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.gpnf-no-entries td span {
+	text-transform: lowercase;
+}
+
+.gpnf-row-actions ul {}
+
+.gpnf-row-actions li {
+	display: inline;
+	position: relative;
+}
+
+.gpnf-row-actions .gfspinner {
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	margin-left: -8px; /* based on 16px width */
+}
+
+.gpnf-row-actions .delete a {
+	color: #c00;
+}
+
+.gpnf-add-entry {
+	margin-top: 10px;
+}
+
+.gpnf-view-related-entries {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+/* jQuery UI Dialog */
+
+.gpnf-dialog.ui-widget-overlay {
+	background: none rgba( 0, 0, 0, 0.6 );
+	opacity: 1.0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999; /* Hate to set it so high but theme's be aggressive these days. */
+}
+
+.gpnf-dialog.ui-dialog {
+	position: absolute;
+	background: #f7f7f7;
+	padding: 0;
+	border: 0;
+	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.5 );
+	font-family: inherit;
+	transition: all ease-in-out 0.25s;
+	border-radius: 4px;
+	outline: 0;
+	font-size: 18px;
+	z-index: 1000000; /* Hate to set it so high but theme's be aggressive these days. */
+}
+
+/* Again, our hand is forced by Gravity Forms' aggressive specificity. */
+html body div#ui-datepicker-div[style] {
+	z-index: 1000001 !important;
+}
+
+.gpnf-dialog .ui-dialog-titlebar {
+	background: #3498db;
+	border: 0;
+	border-radius: 3px 3px 0 0;
+	font-weight: normal;
+	padding: 0 2em;
+	height: 65px;
+}
+
+.gpnf-dialog .ui-dialog-title {
+	margin: 0;
+	line-height: 65px;
+	float: left;
+	text-overflow: ellipsis;
+	color: #fff;
+	font-size: 1.0em;
+}
+
+.gpnf-dialog .ui-button-icon-only .ui-button-text {
+	display: none;
+}
+
+.gpnf-dialog .ui-dialog-titlebar-close {
+	background: none;
+	border: 0;
+	margin: 0;
+	height: auto;
+	width: auto;
+	top: 0;
+	right: 2em;
+	padding: 0;
+	line-height: 65px;
+	outline: 0;
+	position: absolute;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.gpnf-dialog .ui-icon {
+	text-indent: 0;
+	height: auto;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	position: static;
+}
+
+.gpnf-dialog .ui-icon:after {
+	content: '✖';
+	color: #fff;
+	opacity: 0.25;
+	transition: all ease-in-out 0.25s;
+}
+
+.gpnf-dialog .ui-icon:hover:after {
+	opacity: 1.0;
+}
+
+.gpnf-dialog .ui-dialog-content {
+	padding: 2.2em;
+	border-top: 5px solid rgba( 0, 0, 0, 0.05 );
+	background: none transparent;
+	overflow: auto;
+}
+
+body .gpnf-dialog .gform_wrapper ul li.gfield:first-child {
+	margin-top: 0;
+}
+
+.gpnf-dialog .gform_wrapper .gform_heading {
+	margin-bottom: 0;
+}
+
+.gpnf-dialog .gform_wrapper .gform_heading .gform_title {
+	display: none;
+}
+
+.gpnf-dialog .gform_wrapper .gform_heading .gform_description {
+	margin-bottom: 2em;
+}
+
+.gpnf-dialog .gform_wrapper .gform_heading .gform_description:empty {
+	margin-bottom: 0;
+}
+
+.gpnf-dialog .gform_wrapper {
+	margin: 0;
+}
+
+.gpnf-dialog .gform_wrapper .gform_footer {
+	padding-bottom: 0;
+}
+
+.gpnf-dialog .ui-icon,
+.gpnf-dialog .ui-widget-shadow,
+.gpnf-dialog .ui-widget-content {
+	background: none transparent;
+}
+
+.gpnf-dialog .ui-state-disabled,
+.gpnf-dialog .ui-widget-content .ui-state-disabled,
+.gpnf-dialog .ui-widget-header .ui-state-disabled {
+	opacity: 1.0;
+}
