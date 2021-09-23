@@ -17,4 +17,4 @@ jobs:
         server: ftp.aiml.clinic
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /staging2.aiml.clinic/public_html
+        server-dir: /staging2.aiml.clinic/public_html/
