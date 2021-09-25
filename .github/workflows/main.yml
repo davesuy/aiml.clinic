@@ -18,3 +18,4 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /aiml.clinic/public_html/
+        local-dir: ./public_html/

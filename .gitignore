@@ -3,6 +3,16 @@
 
 public_html/wp-content/uploads
 public_html/wp-content/ai1wm-backups
+public_html/wp-config.php
+
+
+# ignore specific themes
+public_html/wp-content/themes/twenty*/
+
+# ignore node dependency directories
+public_html/node_modules/
+
+
 
 
 
